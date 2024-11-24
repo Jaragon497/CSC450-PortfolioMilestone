@@ -1,0 +1,28 @@
+START
+    initialize mutex, flag, and ready variables
+
+    Initialize thread1 -> count_up()
+    Initialize thread2 -> count_down()
+
+    Join Threads
+END
+
+Function count_up():
+    For 1 to 21 (inclusive)
+        OUTPUT i
+    endFor
+
+    OUTPUT "First thread complete!"
+    lock mutex
+    Change ready to true
+    notify the thread_flag
+EndFunction
+
+Function count_down():
+    For 20 to 0 (inclusive):
+        OUTPUT i
+    endFor
+
+    OUTPUT "First thread complete!"
+EndFunction
+
